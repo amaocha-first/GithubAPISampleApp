@@ -25,7 +25,7 @@ class SearchCustomCell: UITableViewCell {
     }
     
     ///画像の角丸
-    func setupLayout() {
+    private func setupLayout() {
         self.userImageView.contentMode = .scaleAspectFill
         self.userImageView.layer.cornerRadius = 20
         self.userImageView.clipsToBounds = true
