@@ -14,6 +14,7 @@
 		CCEA9A55230E56DA00ED509D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEA9A53230E56DA00ED509D /* LaunchScreen.storyboard */; };
 		CCEA9A7D230E5C5300ED509D /* SearchCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCEA9A7C230E5C5300ED509D /* SearchCustomCell.xib */; };
 		CCEA9A7F230E5E4F00ED509D /* SearchCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA9A7E230E5E4F00ED509D /* SearchCustomCell.swift */; };
+		CCEA9A82230E923000ED509D /* SearchResultEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA9A81230E923000ED509D /* SearchResultEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CCEA9A56230E56DA00ED509D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCEA9A7C230E5C5300ED509D /* SearchCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCustomCell.xib; sourceTree = "<group>"; };
 		CCEA9A7E230E5E4F00ED509D /* SearchCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomCell.swift; sourceTree = "<group>"; };
+		CCEA9A81230E923000ED509D /* SearchResultEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		CCEA9A49230E56D900ED509D /* GithubAPISampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				CCEA9A80230E91E300ED509D /* Model */,
 				CCEA9A4A230E56D900ED509D /* AppDelegate.swift */,
 				CCEA9A4E230E56D900ED509D /* Main.storyboard */,
 				CCEA9A7A230E5B3000ED509D /* ViewController */,
@@ -84,6 +87,14 @@
 				CCEA9A7C230E5C5300ED509D /* SearchCustomCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		CCEA9A80230E91E300ED509D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCEA9A81230E923000ED509D /* SearchResultEntity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCEA9A7F230E5E4F00ED509D /* SearchCustomCell.swift in Sources */,
+				CCEA9A82230E923000ED509D /* SearchResultEntity.swift in Sources */,
 				CCEA9A4D230E56D900ED509D /* SearchViewController.swift in Sources */,
 				CCEA9A4B230E56D900ED509D /* AppDelegate.swift in Sources */,
 			);
