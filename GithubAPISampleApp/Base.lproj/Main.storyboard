@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hpk-yP-k11">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OuU-Uy-UHP">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Table View Controller-->
-        <scene sceneID="RgM-hN-TnZ">
+        <!--Search View Controller-->
+        <scene sceneID="xCa-mX-p9S">
             <objects>
-                <tableViewController id="hpk-yP-k11" customClass="SearchTableViewController" customModule="GithubAPISampleApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZEe-oC-ftF">
+                <viewController id="OuU-Uy-UHP" customClass="SearchViewController" customModule="GithubAPISampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n9Z-gi-Pue">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YwX-Bl-58b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkD-PP-cOx">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="LUt-HR-hAI">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9yU-f4-Dwi">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9yU-f4-Dwi" id="EfH-HX-VIB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hpk-yP-k11" id="3Ff-DZ-jDE"/>
-                            <outlet property="delegate" destination="hpk-yP-k11" id="Q4X-Pn-xCD"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ku-kQ-5tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="YwX-Bl-58b" firstAttribute="trailing" secondItem="c8g-Lf-rox" secondAttribute="trailing" id="96h-GT-6Vr"/>
+                            <constraint firstItem="YwX-Bl-58b" firstAttribute="top" secondItem="c8g-Lf-rox" secondAttribute="top" id="PnX-pv-G6v"/>
+                            <constraint firstAttribute="bottom" secondItem="TkD-PP-cOx" secondAttribute="bottom" id="Sbs-go-7Ih"/>
+                            <constraint firstItem="TkD-PP-cOx" firstAttribute="trailing" secondItem="c8g-Lf-rox" secondAttribute="trailing" id="XCs-7a-AEk"/>
+                            <constraint firstItem="TkD-PP-cOx" firstAttribute="leading" secondItem="c8g-Lf-rox" secondAttribute="leading" id="azS-mD-FcY"/>
+                            <constraint firstItem="TkD-PP-cOx" firstAttribute="top" secondItem="YwX-Bl-58b" secondAttribute="bottom" id="gyx-OG-0OL"/>
+                            <constraint firstItem="YwX-Bl-58b" firstAttribute="leading" secondItem="c8g-Lf-rox" secondAttribute="leading" id="sTW-XF-wae"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c8g-Lf-rox"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="YwX-Bl-58b" id="zan-HL-n5h"/>
+                        <outlet property="tableView" destination="TkD-PP-cOx" id="gSo-Ag-rt8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkA-KD-ntB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="128"/>
+            <point key="canvasLocation" x="1463.768115942029" y="161.38392857142856"/>
         </scene>
     </scenes>
 </document>
