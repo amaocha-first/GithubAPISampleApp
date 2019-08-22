@@ -15,6 +15,9 @@
 		CCEA9A7D230E5C5300ED509D /* SearchCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCEA9A7C230E5C5300ED509D /* SearchCustomCell.xib */; };
 		CCEA9A7F230E5E4F00ED509D /* SearchCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA9A7E230E5E4F00ED509D /* SearchCustomCell.swift */; };
 		CCEA9A82230E923000ED509D /* SearchResultEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA9A81230E923000ED509D /* SearchResultEntity.swift */; };
+		CCEA9B46230E9B0800ED509D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCEA9B44230E99D500ED509D /* APIKit.framework */; };
+		CCEA9B48230E9B1400ED509D /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCEA9B47230E9B1300ED509D /* Himotoki.framework */; };
+		CCEA9B4B230EAFE400ED509D /* APIManagerForSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA9B4A230EAFE400ED509D /* APIManagerForSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		CCEA9A7C230E5C5300ED509D /* SearchCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCustomCell.xib; sourceTree = "<group>"; };
 		CCEA9A7E230E5E4F00ED509D /* SearchCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomCell.swift; sourceTree = "<group>"; };
 		CCEA9A81230E923000ED509D /* SearchResultEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultEntity.swift; sourceTree = "<group>"; };
+		CCEA9B44230E99D500ED509D /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		CCEA9B47230E9B1300ED509D /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		CCEA9B4A230EAFE400ED509D /* APIManagerForSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerForSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEA9B48230E9B1400ED509D /* Himotoki.framework in Frameworks */,
+				CCEA9B46230E9B0800ED509D /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +54,7 @@
 			children = (
 				CCEA9A49230E56D900ED509D /* GithubAPISampleApp */,
 				CCEA9A48230E56D900ED509D /* Products */,
+				CCEA9A83230E977300ED509D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,8 +102,18 @@
 			isa = PBXGroup;
 			children = (
 				CCEA9A81230E923000ED509D /* SearchResultEntity.swift */,
+				CCEA9B4A230EAFE400ED509D /* APIManagerForSearch.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CCEA9A83230E977300ED509D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCEA9B47230E9B1300ED509D /* Himotoki.framework */,
+				CCEA9B44230E99D500ED509D /* APIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +126,7 @@
 				CCEA9A43230E56D900ED509D /* Sources */,
 				CCEA9A44230E56D900ED509D /* Frameworks */,
 				CCEA9A45230E56D900ED509D /* Resources */,
+				CCEA9B49230E9B7600ED509D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -164,6 +184,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CCEA9B49230E9B7600ED509D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCEA9A43230E56D900ED509D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -171,6 +213,7 @@
 			files = (
 				CCEA9A7F230E5E4F00ED509D /* SearchCustomCell.swift in Sources */,
 				CCEA9A82230E923000ED509D /* SearchResultEntity.swift in Sources */,
+				CCEA9B4B230EAFE400ED509D /* APIManagerForSearch.swift in Sources */,
 				CCEA9A4D230E56D900ED509D /* SearchViewController.swift in Sources */,
 				CCEA9A4B230E56D900ED509D /* AppDelegate.swift in Sources */,
 			);
@@ -320,6 +363,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSXN8YT5RB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubAPISampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,6 +385,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSXN8YT5RB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubAPISampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

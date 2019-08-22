@@ -7,12 +7,21 @@
 //
 
 import Foundation
+import Himotoki
 
-struct SearchResultEntity {
+struct SearchResultEntity: Decodable {
     
     var repositoryName: String
     var languageName: String
     var userIconImage: String
     var urlBtnText: String
     
+    static func decode(_ e: Extractor) throws -> SearchResultEntity {
+        return try SearchResultEntity(
+            repositoryName: e <| "full_name",
+            languageName: e <| "language",
+            userIconImage: e <| ["owner", "avatar_url"],
+            urlBtnText: e <| "url"
+        )
+    }
 }

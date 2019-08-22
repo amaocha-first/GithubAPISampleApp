@@ -18,29 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YwX-Bl-58b">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkD-PP-cOx">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YwX-Bl-58b" firstAttribute="trailing" secondItem="c8g-Lf-rox" secondAttribute="trailing" id="96h-GT-6Vr"/>
-                            <constraint firstItem="YwX-Bl-58b" firstAttribute="top" secondItem="c8g-Lf-rox" secondAttribute="top" id="PnX-pv-G6v"/>
+                            <constraint firstItem="TkD-PP-cOx" firstAttribute="top" secondItem="c8g-Lf-rox" secondAttribute="top" id="Bjx-Wg-opS"/>
                             <constraint firstAttribute="bottom" secondItem="TkD-PP-cOx" secondAttribute="bottom" id="Sbs-go-7Ih"/>
                             <constraint firstItem="TkD-PP-cOx" firstAttribute="trailing" secondItem="c8g-Lf-rox" secondAttribute="trailing" id="XCs-7a-AEk"/>
                             <constraint firstItem="TkD-PP-cOx" firstAttribute="leading" secondItem="c8g-Lf-rox" secondAttribute="leading" id="azS-mD-FcY"/>
-                            <constraint firstItem="TkD-PP-cOx" firstAttribute="top" secondItem="YwX-Bl-58b" secondAttribute="bottom" id="gyx-OG-0OL"/>
-                            <constraint firstItem="YwX-Bl-58b" firstAttribute="leading" secondItem="c8g-Lf-rox" secondAttribute="leading" id="sTW-XF-wae"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c8g-Lf-rox"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="YwX-Bl-58b" id="zan-HL-n5h"/>
                         <outlet property="tableView" destination="TkD-PP-cOx" id="gSo-Ag-rt8"/>
                     </connections>
                 </viewController>
